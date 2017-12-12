@@ -1,0 +1,109 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Sorts+Mill+Goudy|Prata');
+
+/* page-wide styles */
+
+body {
+  font-size: 20px;
+}
+
+/* column layout */
+
+.cols {
+  width: 750px; /* sum of layout values */
+  margin: 60px auto;
+}
+.cols::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.col1, .col2 {
+  float: left;
+}
+.col1 {
+  width: 350px;
+}
+.col2 {
+  width: 300px;
+  margin-left: 100px;
+}
+
+/* paragraph styles */
+
+p {
+  text-indent: 75px;
+}
+p:first-child {
+  margin-top: 0;
+}
+p::first-letter, .first-letter {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+/* specialty styles */
+
+.big-quote {
+  text-align: center;
+  font-family: 'Prata', serif;
+}
+.big-quote > .content {
+  font-size: 35px;
+  line-height: 52px;
+}
+.big-quote > .content::first-letter {
+  font-size: 45px;
+}
+.big-quote > .attribution {
+  margin-top: 10px;
+}
+
+.contact-info, .payment-info, .offerings {
+  margin-top: 45px;
+}
+
+.offerings {
+  font-style: italic;
+  border: 1px solid black;
+  padding: 20px;
+}
+.offerings > h2 {
+  margin-top: 0;
+  font-size: 25px;
+  text-align: center;
+}
+.offerings > ul {
+  margin-bottom: 0;
+  padding-left: 20px;
+  list-style-type: none;
+}
+.offerings > ul > li {
+  position: relative;
+}
+.offerings > ul > li:before {
+  content: '§';
+  position: absolute;
+  left: -25px;
+  top: -4px;
+  font-size: 24px;
+}
+.offerings > ul > li + li {
+  margin-top: 15px;
+}
+
+.contact-info, .payment-info {
+  text-align: center;
+}
+.contact-info {
+  font-family: 'Sorts Mill Goudy', serif;
+}
+.contact-info > .address,
+.contact-info > .email {
+  font-size: 15px;
+}
+
+.payment-info {
+  font-weight: bold;
+  font-style: italic;
+}
